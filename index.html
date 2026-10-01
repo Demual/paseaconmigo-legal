@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasea Conmigo · Privacy</title>
+<script>
+  // A la versión del idioma del navegador; inglés para el resto.
+  (function () {
+    var l = (navigator.language || 'en').toLowerCase();
+    if (location.hash === '#todos') return;
+    if (l.indexOf('es') === 0) location.replace('privacidad-es.html');
+    else location.replace('privacy-en.html');
+  })();
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.6 system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; }
+  a { display: block; padding: .5rem 0; }
+</style>
+</head>
+<body>
+<h1>Pasea Conmigo</h1>
+<a href="privacy-en.html">Privacy policy (English)</a>
+<a href="privacidad-es.html">Política de privacidad (español)</a>
+</body>
+</html>
