@@ -30,7 +30,7 @@
 <body>
 
 <h1>Privacy policy</h1>
-<p class="fecha"><strong>Pasea Conmigo</strong> app (<code>com.jrsoft.contadorpasos</code>) · Last updated: 1 October 2026</p>
+<p class="fecha"><strong>Pasea Conmigo</strong> app (<code>com.jrsoft.contadorpasos</code>) · Last updated: 14 October 2026</p>
 
 <div class="clave">
 <p><strong>In one sentence:</strong> the app has no user accounts and
@@ -60,6 +60,7 @@ advertising.</p>
   <li><strong>Your profile</strong>: height, weight and, if you want, sex and name. Only used for the calculations.</li>
   <li><strong>Workouts</strong>: time, duration, steps, distance, pace and, if you used GPS, the route.</li>
   <li><strong>Weight log</strong>, achievements, challenges and settings.</li>
+  <li><strong>"More apps by JR Soft"</strong>: the country of your SIM card (or, if there is none, the system region), which that screen reads at that moment to show only the apps available in your country. It is not stored or sent. The Google Play links on that screen carry a tag saying they come from this app, with no data about you.</li>
 </ul>
 
 <h2>Permissions</h2>
@@ -67,6 +68,7 @@ advertising.</p>
   <tr><th>Permission</th><th>What for</th></tr>
   <tr><td>Physical activity</td><td>Reading the phone's step counter and knowing whether you are in a vehicle or on a bike (so those steps are not counted). We ask for it after explaining it.</td></tr>
   <tr><td>Foreground service (health)</td><td>Keep counting with the app closed. Android shows it with a persistent notification.</td></tr>
+  <tr><td>Foreground service (location)</td><td>Only during a GPS workout that you start: keep recording the route with the screen off, with a notification. It stops when the workout ends.</td></tr>
   <tr><td>Precise location</td><td>Only during a GPS workout: route, distance and pace. You can use the app without granting it.</td></tr>
   <tr><td>Notifications</td><td>Today's steps, goal reached, achievements and the reminders you turn on.</td></tr>
   <tr><td>Run at startup</td><td>Keep counting after the phone restarts.</td></tr>
@@ -76,11 +78,12 @@ advertising.</p>
 
 <h2>Data that does leave the phone</h2>
 <h3>Maps (OpenFreeMap)</h3>
-<p>To draw the maps of workouts and challenges, the app downloads map tiles from <a href="https://openfreemap.org">OpenFreeMap</a>. As with any website, its server receives your IP address and which area of the map is requested. Your route and no other data are sent.</p>
+<p>To draw the maps of workouts and challenges, the app downloads map tiles from <a href="https://openfreemap.org">OpenFreeMap</a>. As with any website, its server receives your IP address and which area of the map is requested. Neither your route nor any other data is sent.</p>
 
 <h3>Ads (Google AdMob)</h3>
-<p>The app is free thanks to Google AdMob ads (Google Ireland Limited), always labelled "Ad". Google may receive technical device data, your IP address and the advertising ID, under its <a href="https://policies.google.com/technologies/ads">policy</a>. In the European Economic Area, the United Kingdom and Switzerland, and wherever the law requires it, you are asked for consent first, and you can change it in <em>Profile → About → Ad privacy options</em>. The ads library does not receive your activity data.</p>
-<p>Which ads are shown and where can be adjusted remotely with <strong>Google Firebase Remote Config</strong> (Google Ireland Limited, <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>). That request only carries a random installation identifier created by Firebase and your IP address; it carries no personal or activity data.</p>
+<p>The app is free thanks to Google AdMob ads (Google Ireland Limited), always labelled "Ad". Under its <a href="https://policies.google.com/technologies/ads">policy</a>, Google may receive your IP address (from which it infers an approximate location), the advertising ID and the app set ID, how you interact with the ads and the app (for example, opening it or tapping an ad) and diagnostics and performance data, to show and measure ads, for analytics and to prevent fraud. In the European Economic Area, the United Kingdom and Switzerland, and wherever the law requires it, you are asked for consent first, and you can change it in <em>Profile → About → Ad privacy options</em>. The ads library does not receive your activity data.</p>
+<p>The ad consent message is shown by Google with a text shared by all its advertising partners, which is why it mentions precise geolocation. According to Google, its ads SDK only uses the approximate location inferred from the IP address, and this app does not pass it your GPS location. You can refuse that use in "Manage options".</p>
+<p>The app includes the <strong>Google Firebase Remote Config</strong> library, meant to adjust remotely which ads are shown and where, but it is <strong>switched off</strong>: this version does not configure it, so it does not connect to Firebase or send anything. If it is ever switched on, this policy will say so first.</p>
 
 <h3>Health Connect</h3>
 <p>It is optional and lives on your own phone (it is not a server). Only if you turn it on, the app can:</p>
@@ -88,27 +91,37 @@ advertising.</p>
   <li><strong>Write</strong> your steps, distance and active calories for each hour, and your workouts with their route, so your other health apps can see them.</li>
   <li><strong>Read</strong> your steps: to import, if you ask for it, the ones you already had (from Samsung Health, Google Fit or a watch) and to show you in the app how many steps Health Connect adds up today across all your apps.</li>
 </ul>
-<p>Data read from Health Connect is only used for those features, stays on the phone, is never sent to any server and is <strong>never used for advertising</strong>. The use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements. You can revoke the permissions at any time in Health Connect, where you also decide which other apps can read what this app writes.</p>
+<p>Data read from Health Connect is only used for those features, stays on the phone, is never sent to any server and is <strong>never used for advertising</strong>. The use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements. You can revoke the permissions at any time in Health Connect, where you also decide which other apps can read what this app writes. What the app imports from Health Connect is kept in its private storage, which Android does not let other apps access.</p>
 
 <h3>Google Play services (Recording API and activity recognition)</h3>
 <p>So that no steps are lost if Android closes the app, the app uses the Google Play services "Recording API", which counts steps on the phone itself and keeps them there for about 10 days. It does not need a Google account.</p>
 <p>So that the bumps of a car or the pedalling of a bike are not counted as steps, the app uses Google Play services activity recognition, which tells the app, on the phone itself, when you start or stop being in a vehicle, on a bike, walking, running or still. The app only keeps what is described above ("Trips in a vehicle or on a bike"); it does not send it anywhere or use it for advertising. You can turn it off in <em>Profile → Counting and battery</em>.</p>
 
-<h3>Backups</h3>
-<p>Android's automatic backup may save your history to your Google account (encrypted), depending on your phone settings. Backups and exports made from the app are saved wherever you choose.</p>
+<h3>Backups and switching phones</h3>
+<p>Android's cloud backup (the one in your Google account) is turned off for this app's data: none of it is uploaded. Android does keep a list of the apps you had installed in your account so it can reinstall them, but Google manages that list and it contains no data from this app.</p>
+<p>If, while setting up a new phone, you copy your data directly from the old one, with or without a cable, the app's data (including your step history, your workouts with their routes and your profile) may be moved to the new phone. You ask for this transfer and Android carries it out, using its own tool or your phone maker's, under their own terms. According to Android's documentation, it goes from one phone to the other without going through servers. It never goes through ours: JR Soft receives nothing.</p>
+<p>Whether it happens depends on your Android version and phone maker (it doesn't happen on Android 8 or earlier), so we can't guarantee it. If you set up the new phone from your Google account backup without the old phone, this app's data won't come back, because it isn't in that backup.</p>
+<p>Anything that only makes sense on the old phone is not transferred, such as data encrypted with that phone's keys or your ad choices: the app will ask you again on the new phone. What the app writes to Health Connect is stored by Health Connect, not by the app; whether it moves to the new phone is up to Android.</p>
+<p>Backups and exports made from the app are saved wherever you choose.</p>
+
+<h2>Legal basis and retention</h2>
+<p>The data you keep in the app (activity, profile, health) is processed only on your phone and under your control: JR Soft does not receive it. Moving data between phones is something you do with an Android feature; none of it reaches us. If this were considered processing, its basis is your explicit consent when you enter it or switch on each feature (GDPR art. 6(1)(a) and 9(2)(a)), which you withdraw by deleting it or uninstalling the app. Personalised advertising is based on your consent, collected with Google's form (UMP), which you can withdraw at any time in the ad privacy options. Non-personalised advertising and Google's basic measurement rely on the legitimate interest of funding the free app (art. 6(1)(f)). Maps are downloaded from OpenFreeMap to provide the service you ask for (art. 6(1)(b)). You decide the permissions (physical activity, location, notifications, Health Connect) in Android and can remove them at any time. Everything stored stays until you delete it, clear the app's data or uninstall it.</p>
+
+<h2>Transfers outside Europe</h2>
+<p>Google (AdMob and, where applicable, Google Play services) may process data outside the European Economic Area. Google LLC participates in the EU-U.S. Data Privacy Framework, its UK extension and the Swiss-U.S. framework (<a href="https://policies.google.com/privacy/frameworks">Google's privacy frameworks</a>). OpenFreeMap may serve the maps from servers outside the EEA.</p>
 
 <h2>Children</h2>
-<p>The app is not directed at children under 16.</p>
+<p>The app is not directed at children under 16 and does not knowingly collect data from them.</p>
 
 <h2>Your rights</h2>
-<p>Because the data is on your phone, you can view, export or delete it from the app at any time. For any question about this policy or to exercise your rights under the GDPR, write to <a href="mailto:demual@gmail.com">demual@gmail.com</a>. You can also lodge a complaint with your data protection authority.</p>
+<p>Because the data is on your phone, you can view, export or delete it from the app at any time. For any question about this policy or to exercise your rights under the GDPR, write to <a href="mailto:demual@gmail.com">demual@gmail.com</a>. You can also lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>) or with the data protection authority of your country.</p>
 
 <h2>Not a medical device</h2>
-<p>Pasea Conmigo is a physical activity app. It does not diagnose, treat or monitor any disease. Distance and calories are estimates.</p>
+<p>Pasea Conmigo is a physical activity app: it is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Distance and calories are estimates. For medical advice, consult a healthcare professional.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, this page and the date above will be updated.</p>
 
-<footer>JR Soft · <a href="index.html">Other languages</a></footer>
+<footer>JR Soft · <a href="index.html#todos">Other languages</a></footer>
 </body>
 </html>
